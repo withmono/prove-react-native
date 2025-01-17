@@ -1,13 +1,13 @@
 import React from 'react';
 import { ProveContext } from './prove-provider';
 
-function useProveContext() {
+function useMonoProve() {
   const context = React.useContext(ProveContext);
   if (context === undefined) {
-    throw new Error(`useProveContext must be used within a ProveProvider`);
+    throw new Error(`useMonoProve must be used within a ProveProvider`);
   }
 
   return context;
 }
 
-export default useProveContext;
+export default useMonoProve;

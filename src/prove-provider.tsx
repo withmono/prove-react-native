@@ -1,47 +1,34 @@
 import React from 'react';
-import { MonoProveProviderProps } from './types';
+import type { ProveProviderProps } from './types';
+import MonoProve from './mono-prove';
 
-export interface MonoProveContextType {
+export interface ProveContextType {
   init: () => void;
-  reauthorise: (reauth_code: string) => void;
-  scope?: string;
 }
 
-export const MonoProveContext = React.createContext<MonoProveContextType>({
+export const ProveContext = React.createContext<ProveContextType>({
   init: () => null,
-  reauthorise: () => null,
 });
 
-function MonoProveProvider(props: MonoProveProviderProps) {
+function ProveProvider(props: ProveProviderProps) {
   const [openWidget, setOpenWidget] = React.useState<boolean>(false);
-  const [reauthToken, setReauthToken] = React.useState<any>(null);
 
   function init() {
-    setReauthToken(null);
-    setOpenWidget(true);
-  }
-
-  function reauthorise(reauth_token: string) {
-    setReauthToken(reauth_token);
     setOpenWidget(true);
   }
 
   const payload = {
     openWidget,
     setOpenWidget,
-    ...props
-  }
-
-  if (reauthToken){
-    payload['reauth_token'] = reauthToken
-  }
+    ...props,
+  };
 
   return (
-    <MonoContext.Provider value={{init, reauthorise, scope: props?.scope}}>
-      <MonoConnect {...payload} />
+    <ProveContext.Provider value={{ init }}>
+      <MonoProve {...payload} />
       {props.children}
-    </MonoContext.Provider>
-  )
+    </ProveContext.Provider>
+  );
 }
 
-export default MonoProvider
+export default ProveProvider;
