@@ -3,7 +3,7 @@ import {
   MonoProveButton,
   ProveProvider,
   useMonoProve,
-} from 'prove-react-native';
+} from '@mono.co/prove-react-native';
 import type { ProveEventData } from '../../src/types';
 
 const config = {
@@ -23,9 +23,9 @@ function VerifyIdentity() {
   const { init } = useMonoProve();
 
   return (
-    <View style={{ marginBottom: 10 }}>
+    <View style={styles.btnContainer}>
       <TouchableOpacity onPress={() => init()}>
-        <Text style={{ color: 'blue' }}>Verify your identity</Text>
+        <Text style={styles.btn}>Verify your identity</Text>
       </TouchableOpacity>
     </View>
   );
@@ -35,7 +35,7 @@ export default function App() {
   return (
     <ProveProvider {...config}>
       <View style={styles.container}>
-        <Text style={{ textAlign: 'center' }}>
+        <Text style={styles.headerText}>
           To verify your identity with the Mono Prove Demo App, click the link
           or button below!
         </Text>
@@ -49,6 +49,15 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  btnContainer: {
+    marginVertical: 16,
+  },
+  btn: {
+    color: '#0055BA',
+  },
+  headerText: {
+    textAlign: 'center',
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',

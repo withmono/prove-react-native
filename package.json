@@ -1,6 +1,6 @@
 {
   "name": "@mono.co/prove-react-native",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "The Mono Prove SDK is a quick and secure way to onboard your users from within your React Native app.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -15,8 +15,7 @@
         "types": "./lib/typescript/commonjs/src/index.d.ts",
         "default": "./lib/commonjs/index.js"
       }
-    },
-    "./package.json": "./package.json"
+    }
   },
   "files": [
     "src",
@@ -38,7 +37,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace prove-react-native-example",
+    "example": "yarn workspace @mono.co/prove-react-native-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -55,7 +54,7 @@
     "type": "git",
     "url": "git+https://github.com/withmono/prove-react-native.git"
   },
-  "author": "Victor Olusoji <victor.o@mono.co> (https://github.com/victor-mono)",
+  "author": "Mono (https://github.com/withmono)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/withmono/prove-react-native/issues"
@@ -162,6 +161,7 @@
     "source": "src",
     "output": "lib",
     "targets": [
+      "codegen",
       [
         "commonjs",
         {
@@ -177,6 +177,7 @@
       [
         "typescript",
         {
+          "project": "tsconfig.build.json",
           "esm": true
         }
       ]
@@ -191,13 +192,12 @@
       "android": "android/generated"
     },
     "android": {
-      "javaPackageName": "com.provereactnative"
+      "javaPackageName": "com.monoco.provereactnative"
     }
   },
   "create-react-native-library": {
     "languages": "js",
     "type": "library",
     "version": "0.45.5"
-  },
-  "types": "./lib/typescript/commonjs/src/index.d.ts"
+  }
 }

@@ -35,7 +35,7 @@ interface MonoProveProps {
   children?: any;
 }
 
-interface RenderErrorProps {
+interface ErrorProps {
   name: string | undefined;
   setOpenWidget: (v: boolean) => void;
 }
@@ -45,5 +45,5 @@ export type {
   MonoProveProps,
   ProveProviderProps,
   ProveEventData,
-  RenderErrorProps,
+  ErrorProps,
 };

@@ -25,6 +25,16 @@ Using yarn
 ```bash
 yarn add @mono.co/prove-react-native
 ```
+Also install ```react-native-webview``` because it's a peer dependency for this package.
+
+## Additional Setup
+### Android
+
+State the camera permission in your `android/app/src/main/AndroidManifest.xml` file.
+
+```xml
+<uses-permission android:name="android.permission.CAMERA"/>
+```
 
 ## Usage
 

@@ -14,14 +14,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "provereactnative.example"
+      "bundleIdentifier": "monoco.provereactnative.example"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "provereactnative.example"
+      "package": "monoco.provereactnative.example"
     },
     "web": {
       "favicon": "./assets/favicon.png"
