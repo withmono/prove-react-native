@@ -46,13 +46,16 @@
     "release": "release-it"
   },
   "keywords": [
-    "react-native",
-    "ios",
-    "android"
+    "financial",
+    "data",
+    "API",
+    "banks",
+    "mono",
+    "prove"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/withmono/prove-react-native.git"
+    "url": "git://github.com/withmono/prove-react-native.git"
   },
   "author": "Mono (https://github.com/withmono)",
   "license": "MIT",
@@ -61,7 +64,8 @@
   },
   "homepage": "https://github.com/withmono/prove-react-native#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "dependencies": {
     "react-native-webview": "^13.13.1"
@@ -199,5 +203,9 @@
     "languages": "js",
     "type": "library",
     "version": "0.45.5"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }
