@@ -1,5 +1,5 @@
 function createUrl(path: string, qs: any) {
-  let base = `https://develop.d121npziv08191.amplifyapp.com/${path}`;
+  let base = `https://prove.mono.co/${path}`;
 
   const queryParams = [];
   for (const k in qs) {
