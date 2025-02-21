@@ -1,6 +1,6 @@
 {
   "name": "@mono.co/prove-react-native",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "The Mono Prove SDK is a quick and secure way to onboard your users from within your React Native app.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
