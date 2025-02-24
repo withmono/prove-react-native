@@ -10,6 +10,8 @@ jobs:
   publish:
     name: Build and Publish Project
     runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
       - name: Check out Git repository
@@ -29,5 +31,3 @@ jobs:
 
       - name: Publish project
         run: yarn publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
