@@ -21,13 +21,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
+          cache: 'yarn'
 
       - name: Install Node.js dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Build project
-        run: npm run build
+        run: yarn build
 
       - name: Publish project
-        run: npm publish
+        run: yarn publish --access public
