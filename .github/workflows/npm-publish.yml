@@ -23,11 +23,20 @@ jobs:
           node-version: 22
           cache: 'yarn'
 
+      - name: Setup Yarn
+        run: corepack enable
+
+      - name: Configure Yarn auth
+        run: |
+          yarn config set npmRegistryServer "https://registry.npmjs.org"
+          yarn config set npmAlwaysAuth true
+          yarn config set npmAuthToken "$NODE_AUTH_TOKEN"
+
       - name: Install Node.js dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Build project
-        run: yarn build
+        run: yarn prepare
 
       - name: Publish project
-        run: yarn publish --access public
+        run: yarn npm publish --access public
