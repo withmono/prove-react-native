@@ -6,12 +6,12 @@ For accessing customer accounts and interacting with Mono's API (Identity, Trans
 
 ## Documentation
 
-For complete information about Mono Prove, head to the [docs](https://docs.mono.co/docs).
+For complete information about Mono Prove, head to the [docs](https://docs.mono.co/docs/lookup/prove/integration-guide).
 
 ## Getting Started
 
-1. Register on the [Mono](https://app.mono.com) website and get your public and secret keys.
-2. Retrieve a `sessionId` for a customer by calling the [initiate endpoint](https://docs.mono.co/api)
+1. Register on the [Mono](https://app.mono.co/) website and get your public and secret keys.
+2. Retrieve a `sessionId` for a customer by calling the [initiate endpoint](https://docs.mono.co/api/prove/initiate)
 
 ## Installation
 Using NPM
@@ -158,7 +158,7 @@ export default function App() {
 ### <a name="sesssionId"></a> `sesssionId`
 **String: Required**
 
-This is the session ID returned after calling the [initiate endpoint](https://docs.mono.co/api).
+This is the session ID returned after calling the [initiate endpoint](https://docs.mono.co/api/prove/initiate).
 
 ```js
 const config = {
