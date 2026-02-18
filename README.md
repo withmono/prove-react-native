@@ -11,7 +11,7 @@ For complete information about Mono Prove, head to the [docs](https://docs.mono.
 ## Getting Started
 
 1. Register on the [Mono](https://app.mono.co/) website and get your public and secret keys.
-2. Retrieve a `sessionId` for a customer by calling the [initiate endpoint](https://docs.mono.co/api)
+2. Retrieve a `sessionId` for a customer by calling the [initiate endpoint](https://docs.mono.co/api/prove/initiate)
 
 ## Installation
 Using NPM
